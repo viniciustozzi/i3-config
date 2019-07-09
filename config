@@ -95,11 +95,14 @@ bindsym $mod+w layout tabbed
 
 #sound configuration
 exec --no-startup-id volumeicon
-bindsym XF86AudioRaiseVolume exec amixer set Master -q 5%+
-bindsym XF86AudioLowerVolume exec amixer set Master -q 5%-
+#bindsym XF86AudioRaiseVolume exec amixer set Master -q 5%+
+#bindsym XF86AudioLowerVolume exec amixer set Master -q 5%-
 
 # open emacs
 bindsym $mod+e exec emacs
+
+# lock screen
+bindsym $mod+F12 exec blur
 
 #start dropbox automatically
 exec --no-startup-id exec dropbox start
