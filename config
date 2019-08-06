@@ -16,7 +16,6 @@ set $mod Mod4
 #font pango:monospace 9
 font xft:URWGothic-Book
 
-
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -44,7 +43,7 @@ bindsym $mod+n border normal
 hide_edge_borders none
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+q kill
@@ -95,14 +94,17 @@ bindsym $mod+w layout tabbed
 
 #sound configuration
 exec --no-startup-id volumeicon
-#bindsym XF86AudioRaiseVolume exec amixer set Master -q 5%+
-#bindsym XF86AudioLowerVolume exec amixer set Master -q 5%-
+bindsym XF86AudioRaiseVolume exec amixer set Master -q 5%+
+bindsym XF86AudioLowerVolume exec amixer set Master -q 5%-
 
 # open emacs
 bindsym $mod+e exec emacs
 
+# open android studio
+bindsym $mod+Shift+a exec /opt/android-studio/bin/studio.sh
+
 # lock screen
-bindsym $mod+F12 exec blur
+# bindsym $mod+F12 exec blur
 
 #start dropbox automatically
 exec --no-startup-id exec dropbox start
@@ -259,7 +261,7 @@ bar {
 }
 
 # hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
+#bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
